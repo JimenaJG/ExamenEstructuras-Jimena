@@ -9,6 +9,20 @@
 
 
 // Crear una función a la que le pasamos como parametro un Array en Orden Ascendente:
+const array1 = [8, 9, 10, 11, 12];
+
+console.log("Original array:", array1);
+
+const reversedArray1 = reverseArray1(array1);
+
+console.log("Reversed array:", reversedArray1);
+
+function reverseArray1(array1) {
+  const reversed = array1.slice().reverse();
+  return reversed;
+}
+
+
 // Explicar con claridad cada paso.
 
 const array = [1, 2, 3, 4, 5];
@@ -25,7 +39,27 @@ function reverseArray(array) {
 
 
 // Crear una función de Busqueda Lineal como la vista en clases.
+const perros = [
+    { edad: 2,  raza: "Labrador"},
+    { edad: 4,  raza: "Golden Retriever" },
+    { edad: 3,  raza: "Bulldog"},
+    { edad: 5,  raza: "Poodle"},
+  ];
+  
+  function buscarPerro(Praza, Pedad) {
+    for (let Tipo = 0; Tipo < Praza.length; Tipo++) {
+      if (Praza[Tipo].edad == Pedad) {
+        return Praza[Tipo].raza;
+      }
+    }
+    return "No se encontró ningún perro con esa raza y edad.";
+  }
 
+  
+  console.log(buscarPerro(perros, 5));
+  
+
+  
 // Explicar con claridad cada paso de esta función.
 
 const libros = [
