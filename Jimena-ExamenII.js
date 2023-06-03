@@ -40,23 +40,28 @@ function reverseArray(array) {
 
 // Crear una función de Busqueda Lineal como la vista en clases.
 const perros = [
-    { edad: 2,  raza: "Labrador"},
-    { edad: 4,  raza: "Golden Retriever" },
-    { edad: 3,  raza: "Bulldog"},
-    { edad: 5,  raza: "Poodle"},
-  ];
-  
-  function buscarPerro(Praza, Pedad) {
-    for (let Tipo = 0; Tipo < Praza.length; Tipo++) {
-      if (Praza[Tipo].edad == Pedad) {
-        return Praza[Tipo].raza;
-      }
-    }
-    return "No se encontró ningún perro con esa raza y edad.";
-  }
+  { Raza: "Labrador",         Edad: 2 },
+  { Raza: "Golden Retriever", Edad: 4 },
+  { Raza: "Bulldog",          Edad: 3 },
+  { Raza: "Poodle",           Edad: 5 },
+];
 
-  
-  console.log(buscarPerro(perros, 5));
+function buscarPerro(raza, edad) {
+  for (let i = 0; i < perros.length; i++) {
+    if (perros[i].Raza === raza && perros[i].Edad === edad) {
+      return perros[i];
+    }
+  }
+  return "No se encontró ningún perro con esa raza y edad.";
+}
+
+//Ejemplo de uso
+const razaBuscada = "Bulldog";
+const edadBuscada = 3;
+const perroEncontrado = buscarPerro(razaBuscada, edadBuscada);
+
+console.log(perroEncontrado,);
+
   
 
   
